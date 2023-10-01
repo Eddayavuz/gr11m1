@@ -4,6 +4,7 @@ public class Demo {
 	
 	public static void main(String[] args) {
 		
+	
 		
 		// IF STATEMENT
 		
@@ -55,13 +56,33 @@ public class Demo {
 		}
 		else {
 			System.out.println("both numbers are equal");
+		}		
+
+		// There's another way to write the same program with less code. It's possible with the logical operators
+		// we use && to add another statement in the condition.
+
+		// let's write a small program that convert student's grade into a letter format.
+
+		int grade = 49; 
+
+		if (grade <= 100 && grade >= 90) {
+			System.out.println("You got A");
+		}
+		else if (grade <= 89 && grade >= 70) {
+			System.out.println("You got B");
+		}
+		else if (grade <= 69 && grade >= 50) {
+			System.out.println("You got C");
+		}
+		else {
+			System.out.println("You got D");
 		}
 		
 		
 		// NESTED-IF
 		
 		int x = 10; // declare x
-        int y = 5; // declare y
+        	int y = 5; // declare y
 
         if (x > y) { // check if x is greater than y
             System.out.println(x + " is greater than " + y); // do this if the statement is true.
