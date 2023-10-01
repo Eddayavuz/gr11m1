@@ -8,6 +8,7 @@ public class Demo {
 		// IF STATEMENT
 		
 		int i = 10;
+		int j = 15;
 		
 		if (i < 15) // if the condition is true
 		{
@@ -31,13 +32,29 @@ public class Demo {
 			
 		// IF-ELSE STATEMENT
 		
-		if(i < 15) 
+		if(i < j) 
 		{
-			System.out.println("i is less than 15");
+			System.out.println(i + " is less than " + j);
 		}
 		else
 		{
-			System.out.println("i is greater than 15");
+			System.out.println(i + " is greater than " + j);
+		}
+		
+		
+		// What if we have a third condition? Like i is equals to j?
+		// then we simply modify our if-else statement.
+		
+		if(i < j) 
+		{
+			System.out.println(i + " is less than " + j);
+		}
+		else if (i > j)
+		{
+			System.out.println(i + " is greater than " + j);
+		}
+		else {
+			System.out.println("both numbers are equal");
 		}
 		
 		
