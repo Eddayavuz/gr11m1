@@ -28,10 +28,7 @@ public class StringManipulation {
         // 8. Find the index of the first occurrence of 'l' in the string.
         int indexOfL = text.indexOf('l');
 
-        // 9. Split the string into an array of words based on spaces.
-        String[] words = text.split(" ");
-
-        // 10. Concatenate the string with the phrase " Have a nice day." and print the result.
+        // 9. Concatenate the string with the phrase " Have a nice day." and print the result.
         String concatenatedText = text + " Have a nice day.";
 
         // Print the results
