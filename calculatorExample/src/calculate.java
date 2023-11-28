@@ -9,13 +9,7 @@ public class calculate {
     public int getSum(){
         return x+y;
     }
-    public int getMul(){
-        return x*y;
-    }
     public int getSub(){
         return x-y;
-    }
-    public double getDiv(){
-        return (double)x / y;
     }
 }
