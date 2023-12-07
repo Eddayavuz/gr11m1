@@ -9,14 +9,13 @@ public class Post
         this.username = username;
         this.caption = caption;
     }
-    public void setCaption(String newCaption){ // setter method
-        caption = newCaption;
+    public void setCaption(String caption){ // setter method - modifiers
+        this.caption = caption;
         System.out.println("Update Successful");
         System.out.println("*****************");
 
     }
-
-    public void getPostDetails(){ // getter method
+    public void getPostDetails(){ // getter method - accessor method
         System.out.println("username: " + username);
         System.out.println("caption: " + caption);
     }
