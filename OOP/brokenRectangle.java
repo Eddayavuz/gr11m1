@@ -12,9 +12,12 @@ class Rectangle {
         return length * width;
     }
 
-    // Non-static method referencing static variable without instance
     public void printArea() {
-        System.out.println("Area: " + length*width);
+        System.out.println("Area: " + calculateArea());
+    }
+
+    double getLength(){
+        return this.length;
     }
 
 }
@@ -22,7 +25,7 @@ public class brokenRectangle{
     public static void main(String[] args){
 
         Rectangle rec1 =  new Rectangle(10,20); // mistake #5
-        System.out.println("Length: " + length); // mistake #6
+        System.out.println("Length: " + rec1.getLength(4)); // mistake #6
         printArea(); // mistake #7
 
 
