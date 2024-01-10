@@ -1,3 +1,9 @@
+/*
+1. Complete the code in methodA to access and print the values of classVariable and localVariableA. Also, comment on whether localVariableA can be accessed in methodB.
+2. Complete the code in methodB to access and print the value of classVariable. Also, comment on whether classVariable can be accessed in methodA, and whether localVariableB can be accessed in methodA.
+3. In the main method, create an instance of ScopePractice, call methodA and methodB, and observe the access to classVariable and local variables. Comment on whether methodA or methodB can directly access localVariableA or localVariableB.
+*/
+
 public class Scope{
 public static void main(String[] args) {
         // TODO: Create an instance of ScopePractice, call methodA and methodB,
