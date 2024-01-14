@@ -24,3 +24,7 @@ public class Main {
         securityAlarm.triggerAlarm();
     }
 }
+
+// DISCUSSION: 
+// 1. How does the implementation of the Sensor class demonstrate the concept of encapsulation?
+// 2. In what ways does encapsulation enhance the security of the home security system?
