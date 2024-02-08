@@ -1,4 +1,4 @@
-public class Main {
+public class arrayOperations {
 
     public static void main(String[] args) {
 
