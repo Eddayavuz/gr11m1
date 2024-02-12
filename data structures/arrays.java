@@ -34,5 +34,11 @@ public class arrays {
         arr3[2] = 10;
         arr3[3] = -12;
         System.out.println(arr3[2]);
+        }
+
+    // 4. CREATE A METHOD WITH ARRAY PARAMETER
+    public static int findSize(int[] myArr){
+        return myArr.length;
+
     }
 }
