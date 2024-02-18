@@ -56,8 +56,8 @@ public class Main {
 
     private static double calculateAverage(int[] grades) {
         double sum = 0;
-        for (int grade : grades) {
-            sum += grade;
+        for (int i=0; i < grades.length; i++) {
+            sum += grades[i];
         }
         return sum / grades.length;
     }
@@ -88,8 +88,8 @@ public class Main {
 
     private static int countFailedStudents(int[] grades) {
         int count = 0;
-        for (int grade : grades) {
-            if (grade < 50) {
+        for (int i = 0; i < grades.length; i++) {
+            if (grades[i] < 50) {
                 count++;
             }
         }
