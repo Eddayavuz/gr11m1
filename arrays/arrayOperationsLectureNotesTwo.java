@@ -30,27 +30,5 @@ public class arrayOperationsLectureNotesTwo {
         {
             System.out.println(student);
         }
-
-        displayArray(numList);
-        System.out.println();
-        displayArray(reverseArray(numList));
-    }
-
-    // Another common array algorithm involves reordering or reversing our arrays. 
-    // While this can be done in a few different ways, a common method is to create a new temporary array 
-    // where a copy of the new order for values is stored.
-    
-    public static int[] reverseArray (int[] array) {
-        int length = array.length;
-        int[] reversed = new int[array.length];
-        for (int i = 0; i < length; i++) {
-            reversed[i] = array[length - 1 - i];
-        }
-        return reversed;
-    }
-
-    public static void displayArray(int[] array){
-        for (int item: array)
-            System.out.print(item + " ");
     }
     }
