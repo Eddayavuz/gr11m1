@@ -61,7 +61,6 @@ public class Main {
         }
         return sum / grades.length;
     }
-
     private static String findHighestGradeStudent(String[] studentNames, int[] grades) {
         int index = 0;
         int maxGrade = 0;
@@ -76,7 +75,7 @@ public class Main {
 
     private static String findLowestGradeStudent(String[] studentNames, int[] grades) {
         int index = 0;
-        int minGrade = grades[0];
+        int minGrade = 100;
         for (int i = 0; i < grades.length; i++) {
             if (grades[i] < minGrade) {
                 minGrade = grades[i];
