@@ -48,12 +48,10 @@ public class spellChecker
      * ADD IN CODE TO COUNT and PRINT OUT THE NUMBER OF WORDS CHECKED!
      */
     public boolean binarySpellCheck(String word) {
-        int count = 0;
         int left = 0;
         int right = dictionary.size() - 1;
         while (left <= right)
         {
-            count++;
             int middle = (left + right) / 2;
             if (word.compareToIgnoreCase(dictionary.get(middle)) < 0)
             {
@@ -64,12 +62,10 @@ public class spellChecker
                 left = middle + 1;
             }
             else {
-                System.out.println("Binary " + count);
                 return true;
             }
 
         }
-        System.out.println("Binary " + count);
         return false;
     }
 
