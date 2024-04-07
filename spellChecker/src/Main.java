@@ -13,7 +13,6 @@ public class Main {
                 System.out.println(word + " is spelled correctly!");
             else
                 System.out.println(word + " is misspelled!");
-            checker.binarySpellCheck(word);
             System.out.print("Enter a word to spell check or q to quit: ");
             word = scan.nextLine();
         }
