@@ -5,7 +5,7 @@ public class spellChecker
 
     // create and initialize an alphabetically ordered String Array of animals
     String[] animals = {
-            "Ladybug", "Bear", "Beetle", "Chameleon", "Cheetah",
+            "Albatross", "Bear", "Beetle", "Chameleon", "Cheetah",
             "Crab", "Crocodile", "Deer", "Dolphin", "Eagle",
             "Elephant", "Flamingo", "Fox", "Frog", "Giraffe",
             "Gorilla", "Hippo", "Hummingbird", "Kangaroo", "Koala",
