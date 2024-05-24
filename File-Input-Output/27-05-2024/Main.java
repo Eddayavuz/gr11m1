@@ -1,25 +1,31 @@
-import java.util.*;
 import java.io.*;
-public class Main {
+
+public class WriteToTextFile {
+
     public static void main(String[] args) {
-        int number = 0;
-        Scanner myReader = new Scanner(System.in);
-        System.out.print("enter the file name to be created on your desktop: ");
-        String fileName = "/Users/eda/Desktop/" + myReader.nextLine();
-        while (true){
-            System.out.print("enter the number. if you wish to quit, type done: ");
-            String input = myReader.nextLine();
-            if(input.equals("done")){
-                break;
-            }else {
-                // 3. call your method here with necessary parameters.
-            }
-            }
-        }
+        fileWriterTest("ms. Yavuz is the best teacher!\uD83E\uDD20","/Users/eda/Desktop/fileWriterTester.txt");
+        printWriterTest("ms. Yavuz is still the best teacher!\uD83E\uDD20\uD83E\uDD20\uD83E\uDD20","/Users/eda/Desktop/printWriterTester.txt" );
+    }
 
-        public static void writeToFile(String fileName, String input){
-            // 1. Create an object with the class of your choice (FileWriter or PrintWriter)
-	    // 2. using the object, call the method that will print the input into the file. 
-        }
+    // since so many things can go wrong working with files, we'll have to handle exceptions.
 
+    private static void fileWriterTest(String message, String fileName){
+        try(FileWriter outStream = new FileWriter(fileName, true)){ // Create stream & open file
+            outStream.write(message); // pass the message into the write method.
+            System.out.println("fileWriterTest method is successful!");
+            }
+        catch (IOException e){
+            System.out.println("oppa: " + e);
+        }
+    }
+
+    private static void printWriterTest(String message, String fileName){
+        try(PrintWriter outStream = new PrintWriter(new FileOutputStream(fileName))) {
+            outStream.print(message);
+            System.out.println("printWriterTest method is successful!");
+        }
+        catch (IOException e){
+            System.out.println("oppa: " + e);
+        }
+    }
 }
