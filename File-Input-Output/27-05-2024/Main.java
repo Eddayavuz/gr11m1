@@ -12,7 +12,7 @@ public class Main {
             if(input.equals("done")){
                 break;
             }else {
-                writeToFile(fileName, input);
+                // 3. call your method here with necessary parameters.
             }
             }
         }
