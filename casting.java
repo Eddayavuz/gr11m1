@@ -1,6 +1,6 @@
 package casting;
 
-public class examples {
+public class casting {
 	
 	public static void main(String[]args) {
 		// Casting to an int chops off the decimal, rather than rounding
