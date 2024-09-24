@@ -1,8 +1,17 @@
-package casting;
+import java.util.Scanner;
 
 public class casting {
 	
 	public static void main(String[]args) {
+
+		// get information from user
+
+		Scanner reader = new Scanner (System.in);
+
+		System.out.println("enter a number: ");
+		int number1 = reader.nextInt();
+		System.out.println("this is the number you entered: " + number1);
+		
 		// Casting to an int chops off the decimal, rather than rounding
         // to the nearest int.
         int doubleCastedToInt = (int) 10.9 ;
