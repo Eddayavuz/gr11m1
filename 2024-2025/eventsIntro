@@ -36,7 +36,14 @@ public class eventsIntro {
             }
         });
 
+/* TASK: Improve this game by adding another button to decrement the counter.
+Your GUI should look like this:
 
+------------
+0            
+|+| |-|
+------------
 
+*/
     }
 }
