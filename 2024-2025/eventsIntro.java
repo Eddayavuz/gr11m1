@@ -29,19 +29,14 @@ public class eventsIntro {
                showCLicks.setText(String.valueOf(counter));
            }
        });
-        resetButton.addActionListener(new ActionListener(){
 
-            public void actionPerformed(ActionEvent e){
-                showCLicks.setText("0");
-            }
-        });
 
-/* TASK: Improve this game by adding another button to decrement the counter.
+/* TASK: Improve this game by adding another button to reset and to decrement the counter.
 Your GUI should look like this:
 
 ------------
 0            
-|+| |-|
+|+| |-| |reset|
 ------------
 
 */
