@@ -3,76 +3,81 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class calculator{
+public class main{
     public static void main(String[] args) {
-
-        //frame
-        JFrame frame = new JFrame("My Calculator");
-        frame.setSize(500,500);
-        frame.setLayout(new GridLayout(3,1));
+        JFrame window = new JFrame("calculator");
+        window.setSize(500,500);
+        window.setLayout(new GridLayout(3,1));
 
         //panel for textboxes
-        JPanel textPanel = new JPanel(new FlowLayout());
-        JTextField textBox1 = new JTextField(8);
-        JTextField textBox2 = new JTextField(8);
-        textPanel.add(textBox1);
-        textPanel.add(textBox2);
+
+        JPanel textboxPanel = new JPanel(new FlowLayout());
+        JTextField textBox1 = new JTextField(10);
+        JTextField textBox2 = new JTextField(10);
+
+        textboxPanel.add(textBox1);
+        textboxPanel.add(textBox2);
+
+        window.add(textboxPanel);
+        window.setVisible(true);
 
         //panel for buttons
-        JPanel buttons = new JPanel(new FlowLayout());
-        JButton add = new JButton("+");
+        JPanel buttonsPanel = new JPanel(new FlowLayout());
+        JButton addition = new JButton("+");
         JButton subs = new JButton("-");
         JButton mul = new JButton("*");
         JButton div = new JButton("/");
-        buttonStyle(add);
-        buttonStyle(subs);
-        buttonStyle(mul);
-        buttonStyle(div);
 
-        buttons.add(add);
-        buttons.add(subs);
-        buttons.add(mul);
-        buttons.add(div);
+        setStyle(addition);
+        setStyle(subs);
+        setStyle(mul);
+        setStyle(div);
+
+        buttonsPanel.add(addition);
+        buttonsPanel.add(subs);
+        buttonsPanel.add(mul);
+        buttonsPanel.add(div);
+
+        window.add(buttonsPanel);
 
         //panel for result
+        JPanel resultPanel = new JPanel(new FlowLayout());
+        JLabel result = new JLabel("result");
+        resultPanel.add(result);
 
-        JPanel results = new JPanel(new FlowLayout());
-        JLabel label = new JLabel("Result");
-        results.add(label);
+        window.add(resultPanel);
 
-        frame.add(textPanel);
-        frame.add(buttons);
-        frame.add(results);
+        window.setVisible(true);
 
-        frame.setVisible(true);
-
-        add.addActionListener(new ActionListener() {
+        addition.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                buttonClicked('+',textBox1,textBox2,label);
+                calculate('+', textBox1,textBox2,result);
             }
         });
+        
+        //TASK 1: create an event for all the other buttons and call them with their respective operators.
+        
     }
 
-    public static void buttonStyle(JButton button){
-        button.setFont(new Font("Arial", Font.BOLD, 32));
+    public static void setStyle(JButton button){
+        button.setFont(new Font("Arial", Font.BOLD, 45));
         button.setForeground(Color.BLUE);
     }
-
-
-    public static void buttonClicked(char operator, JTextField textBox1, JTextField textBox2, JLabel label){
-        double num1 = Double.parseDouble(textBox1.getText()); // parse the value to double.
-        double num2 = Double.parseDouble(textBox2.getText()); // parse the value to double.
-
+    
+    public static void calculate (char operator, JTextField textBox1, JTextField textBox2, JLabel result){
+        double num1 = Double.parseDouble(textBox1.getText()); // converted text into double.
+        double num2 = Double.parseDouble(textBox2.getText()); // converted text into double.
         switch (operator){
             case '+':
-                label.setText(String.valueOf(num1+num2));
+                result.setText(String.valueOf(num1+num2)); //displayed the result
                 break;
+           // Complete the switch
+            
+            // In division case, if the divider is 0, do not attempt the calculation and prompt the user
+            // with a message like "can't divide by 0".
         }
+        
+        
     }
-
-    /* TASK:
-    complete this calculator for buttons subs, mul, div.
-        in division if the second number is 0, prompt the user "not a number".
-    * */
 
 }
