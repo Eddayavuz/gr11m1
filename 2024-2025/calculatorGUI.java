@@ -53,25 +53,6 @@ public class calculatorGUI{
             }
         });
 
-        minus.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                buttonClicked('-', textBox1, textBox2, result);
-            }
-        });
-
-        slash.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                buttonClicked('/', textBox1, textBox2, result);
-            }
-        });
-
-        x.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                buttonClicked('*', textBox1, textBox2, result);
-            }
-        });
-
-
     }
     public static void buttonClicked(char operator, JTextField textbox1, JTextField textbox2, JLabel result)
     {
@@ -82,17 +63,6 @@ public class calculatorGUI{
                         result.setText(String.valueOf(num1 + num2));
                         break;
                     case '-':
-                        result.setText(String.valueOf(num1 - num2));
-                        break;
-                    case '/':
-                        if(num2!=0){
-                        result.setText(String.valueOf(num1 / num2));
-                        }else{result.setText("can't divide by zero");
-                        }
-                        break;
-                    case '*':
-                        result.setText(String.valueOf(num1 * num2));
-                        break;
                 }
 
             }
