@@ -42,7 +42,5 @@ class Person {
     }
 
     // Task 7: Add a method to update the email
-    public void updateEmail(String newEmail) {
-        email = newEmail;
-    }
+   
 }
