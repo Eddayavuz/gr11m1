@@ -9,7 +9,7 @@
 class Students {
     private String studentName;
     private int rollNo;
-    private static String school = "ACS";
+    private String school = "ACS";
  public Students(String studentName, int rollNo){
      this.studentName = studentName;
      this.rollNo = rollNo;
