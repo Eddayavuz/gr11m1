@@ -37,6 +37,10 @@ class Wizard {
         return name;
     }
 
+    public int getDarkMagic(){
+        return darkMagic;
+    }
+
     public void setHealth(Warrior attack) {
        health = health - (attack.getSword() - wizardArmor);
     }
@@ -70,6 +74,10 @@ class Warrior {
 
     public int getHealth() {
         return health;
+    }
+
+    public void setHealth(Wizard attack) {
+       health = health - (attack.getDarkMagic() - wizardArmor);
     }
 
 }
