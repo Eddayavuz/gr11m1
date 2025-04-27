@@ -1,32 +1,26 @@
 public class Polymorphism {
     public static void main(String[] args) {
-        // Polymorphism: We declare an array of type Animal,
-        // but store Chicken and Cow objects (subclasses of Animal)
         Animal[] farmAnimals = {
-                new Chicken(1, "Henrietta", 2, "female"),
-                new Cow(2, "Bessie", 4, "female"),
-                new Chicken(3, "Cluckster", 1, "male")
+            new Chicken(1, "Henrietta", 2, "female"),
+            new Cow(2, "Bessie", 4, "female"),
+            // TODO: Add your own Animal subclass here (e.g., new Sheep(...))
         };
 
         System.out.println("Morning on the farm!");
         for (Animal animal : farmAnimals) {
-            // Polymorphism in action:
-            // The correct makeSound() and getProduct() methods
-            // are called depending on the actual object type at runtime
             animal.makeSound();
             System.out.println(animal.getName() + " produces: " + animal.getProduct());
             System.out.println();
         }
+        // TODO: Before you run, write down what you think the output will be!
     }
 }
 
-// Base class (Superclass)
 class Animal {
     int id;
     String name;
     int age;
     String gender;
-    String product;
 
     public Animal(int id, String name, int age, String gender) {
         this.id = id;
@@ -39,25 +33,27 @@ class Animal {
         return name;
     }
 
-    // Methods intended to be overridden in subclasses (runtime polymorphism)
-    public void makeSound(){}
-    public String getProduct(){
-        return product;
+    public void makeSound() {
+        // Default: No sound
+    }
+
+    public String getProduct() {
+        // Default: nothing
+        return "";
     }
 }
 
-// Subclass Chicken inherits from Animal
 class Chicken extends Animal {
     public Chicken(int id, String name, int age, String gender) {
         super(id, name, age, gender);
     }
 
-    @Override // Polymorphism: Overriding the makeSound method
+    @Override
     public void makeSound() {
         System.out.println(name + " the chicken says: Cluck cluck!");
     }
 
-    @Override // Polymorphism: Overriding the getProduct method
+    @Override
     public String getProduct() {
         if (gender.equalsIgnoreCase("female")) {
             return "Eggs";
@@ -67,18 +63,17 @@ class Chicken extends Animal {
     }
 }
 
-// Subclass Cow inherits from Animal
 class Cow extends Animal {
     public Cow(int id, String name, int age, String gender) {
         super(id, name, age, gender);
     }
 
-    @Override // Polymorphism: Overriding the makeSound method
+    @Override
     public void makeSound() {
         System.out.println(name + " the cow says: Moo!");
     }
 
-    @Override // Polymorphism: Overriding the getProduct method
+    @Override
     public String getProduct() {
         if (gender.equalsIgnoreCase("female")) {
             return "Milk";
@@ -87,3 +82,7 @@ class Cow extends Animal {
         }
     }
 }
+
+// TODO: Create your own Animal subclass below (e.g., class Sheep extends Animal)
+// - Implement makeSound() to print something like "Shaun the sheep says: Baa!"
+// - Implement getProduct() to return what your animal produces
