@@ -3,7 +3,7 @@ import java.util.*;
 
 
 // 1. read the TEXT file line by line
-// 2. as I read them I will create and add objects them to my list
+// 2. as I read them I will create and add OBJECTS to my list
 // 3. print out the linkedlist on the console
 
 class Car implements Serializable{
