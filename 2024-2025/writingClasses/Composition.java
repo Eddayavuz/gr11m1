@@ -1,9 +1,8 @@
-public class Composition {
+public class Composition{
     public static void main(String[] args) {
-        Library library = new Library();
-        library.addBook1("Java Basics");
-        library.addBook2("Data Structures");
-        library.showBooks();
+        Library library1 = new Library("ACS Library", "Java Basics", "Intro to Sleep");
+
+        library1.showBooks();
     }
 }
 
@@ -20,18 +19,19 @@ class Book {
 }
 
 class Library {
+    private String libraryAddress;
     private Book book1;
     private Book book2;
 
-    public void addBook1(String title) {
-        book1 = new Book(title);
+    public Library(String libraryAddress, String book1Title, String book2Title){
+        this.libraryAddress = libraryAddress;
+        this.book1 = new Book(book1Title);
+        this.book2 = new Book(book2Title);
     }
 
-    public void addBook2(String title) {
-        book2 = new Book(title);
-    }
 
     public void showBooks() {
+        System.out.println("In " + libraryAddress +" the available books are:");
         if (book1 != null) {
             System.out.println(book1.getTitle());
         }
