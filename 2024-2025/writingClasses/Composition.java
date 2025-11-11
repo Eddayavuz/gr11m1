@@ -5,6 +5,8 @@ Concept: Composition (A House HAS Rooms)
 
 In this example:
 - A House object *creates and owns* its Room objects.
+
+👉 Key idea:
 - If the House is destroyed, its Rooms cannot exist on their own.
 */
 
