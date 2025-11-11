@@ -1,42 +1,55 @@
-public class Composition{
+/*
+Practical Task – House Composition
+------------------------------------
+Concept: Composition (A House HAS Rooms)
+
+In this example:
+- A House object *creates and owns* its Room objects.
+- If the House is destroyed, its Rooms cannot exist on their own.
+*/
+
+public class Composition {
     public static void main(String[] args) {
-        Library library1 = new Library("ACS Library", "Java Basics", "Intro to Sleep");
+        // 🏠 Step 1: Create a House with two Rooms
+        House myHouse = new House("Maple Street 24", "Living Room", "Kitchen");
 
-        library1.showBooks();
+        // 🏠 Step 2: Show all details of the house
+        myHouse.showDetails();
     }
 }
 
-class Book {
-    private String title;
+class Room {
+    private String roomName;
 
-    public Book(String title) {
-        this.title = title;
+    // Constructor for creating a room
+    public Room(String roomName) {
+        this.roomName = roomName;
     }
 
-    public String getTitle() {
-        return title;
+    public String getRoomName() {
+        return roomName;
     }
 }
 
-class Library {
-    private String libraryAddress;
-    private Book book1;
-    private Book book2;
+class House {
+    private String address;
+    private Room room1;
+    private Room room2;
 
-    public Library(String libraryAddress, String book1Title, String book2Title){
-        this.libraryAddress = libraryAddress;
-        this.book1 = new Book(book1Title);
-        this.book2 = new Book(book2Title);
+    // Constructor – creates a house and its rooms together
+    public House(String address, String room1Name, String room2Name) {
+        this.address = address;
+
+        // Composition: the rooms are created INSIDE the house
+        this.room1 = new Room(room1Name);
+        this.room2 = new Room(room2Name);
     }
 
-
-    public void showBooks() {
-        System.out.println("In " + libraryAddress +" the available books are:");
-        if (book1 != null) {
-            System.out.println(book1.getTitle());
-        }
-        if (book2 != null) {
-            System.out.println(book2.getTitle());
-        }
+    // Display details of the house
+    public void showDetails() {
+        System.out.println("🏡 House located at: " + address);
+        System.out.println("This house has the following rooms:");
+        System.out.println("- " + room1.getRoomName());
+        System.out.println("- " + room2.getRoomName());
     }
 }
