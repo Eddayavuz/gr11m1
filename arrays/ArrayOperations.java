@@ -63,20 +63,4 @@ public class ArrayOperations {
         }
         System.out.println();
     }
-
-    // TASK 1: Calculates and returns the sum of all elements in the array
-    public static int sumOfItems(int[] array) {
-        return 0;
-    }
-
-    // TASK 2: Calculates and returns the average of array elements
-    public static double calculateAverage(int[] array) {
-       return 0.0;
-    }
-
-    // TASK 3: Counts how many even numbers exist in the array
-    public static int countEvenNumbers(int[] array) {
-        return 0;
-    }
-
 }
