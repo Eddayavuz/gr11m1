@@ -10,9 +10,7 @@ public class arrayOperationsLectureNotesTwo {
         }
 
 // Both standard and enhanced for loops are useful in different contexts.
-// For example, since enhanced for loops takes the value of each element,
-// they cannot modify the value of an element.
-
+        
 // If elements need to be updated, standard for loops are better.
 // In contrast, if elements just need to be accessed, enhanced for loops provide a more streamlined way
 // to access elements without the need for a counter. The use of enhanced loops also let us avoid ArrayIndexOutOfBounds error.
