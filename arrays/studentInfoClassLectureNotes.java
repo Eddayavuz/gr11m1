@@ -9,10 +9,10 @@ public class studentInfoClassLectureNotes {
         getOldest(studentArray).displayInfo();
     }
 
-    // find the oldest student. And return the Student object.
+    //Find the oldest student. And return the Student object.
     public static Students getOldest(Students[] studentArray){
     int index = 0;
-    int oldest = 0;
+    int oldest = studentArray[0];
 
     for (int i=0; i < studentArray.length; i++){
         if(studentArray[i].birthYear> oldest){
